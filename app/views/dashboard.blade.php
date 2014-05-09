@@ -19,31 +19,31 @@
     <![endif]-->
 </head>
 <body>
-<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
-	<div class="container">
-		<div class="navbar-header">
-			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-			<span class="sr-only">Toggle navigation</span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			<span class="icon-bar"></span>
-			</button>
-			<a class="navbar-brand" href="#">Project name</a>
-		</div>
-		<div class="navbar-collapse collapse">
-			<form class="navbar-form navbar-right" role="form">
-				<div class="form-group">
-					<input type="text" placeholder="Email" class="form-control">
+
+	<header>
+		<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+			<div class="container">
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="sr-only">Toggle navigation</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="#"><img src="{{ URL::asset('img/logo.png') }}"></a>
 				</div>
-				<div class="form-group">
-					<input type="password" placeholder="Password" class="form-control">
+				<div class="navbar-collapse collapse">
+					<ul class="nav navbar-nav">
+			        	<li class="active"><a href="#">Home</a></li>
+			        	<li><a href="#about">About</a></li>
+			        	<li><a href="#contact">Contact</a></li>
+			      	</ul>
 				</div>
-				<button type="submit" class="btn btn-success">Sign in</button>
-			</form>
+				<!--/.navbar-collapse -->
+			</div>
 		</div>
-		<!--/.navbar-collapse -->
-	</div>
-</div>
+	</header>
+
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
 	<div class="container">
