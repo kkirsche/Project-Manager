@@ -1,10 +1,16 @@
 module.exports = function(grunt) {
+    require("matchdep").filterDev("grunt-*").forEach(grunt.loadNpmTasks);
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
         sass: {
+            options: {
+                precision: 5
+            },
             dist: {
                 options: {
-                    style: 'compressed'
+                    style: 'compressed', //compact, compressed, nested or expanded
+                    sourcemap: true
                 },
                 files: {
                     'public/css/bootstrap.css' : 'public/scss/bootstrap.scss',
@@ -13,13 +19,14 @@ module.exports = function(grunt) {
             }
         },
         watch: {
+            options: {
+                livereload: true
+            },
             css: {
                 files: '**/*.scss',
                 tasks: ['sass']
             }
         }
     });
-    grunt.loadNpmTasks('grunt-contrib-sass');
-    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.registerTask('default',['watch']);
 };
