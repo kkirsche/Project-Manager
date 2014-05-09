@@ -1,6 +1,8 @@
 /*******************************************************
 Colors
 *******************************************************/
+$white: #FFFFFF;
+
 $turquoise: #1ABC9C;
 $green-sea: #16A085;
 
@@ -33,3 +35,44 @@ $asbestos: #7F8C8D;
 
 $pantone-202c: #9D183D;
 $pantone-429c: #B1B7BB;
+
+$pantone-206c: #CB0044;
+
+/*******************************************************
+Mixins
+*******************************************************/
+@mixin border-radius($radius) {
+    -webkit-border-radius: $radius;
+    -moz-border-radius: $radius;
+    -ms-border-radius: $radius;
+    border-radius: $radius;
+    background-clip: padding-box; /* stops bg color from leaking outside the border: */
+}
+
+/*******************************************************
+Header Bar
+*******************************************************/
+.navbar {
+    background-color: $pantone-202c;
+    color: $white;
+}
+
+.navbar-inverse .navbar-toggle:hover, .navbar-inverse .navbar-toggle:focus {
+    background-color: $pantone-206c;
+}
+
+.navbar-inverse, .navbar-inverse .navbar-toggle, .navbar-inverse .navbar-collapse, .navbar-inverse .navbar-form {
+    border-color: $pantone-206c;
+}
+
+.navbar img {
+    max-height: 100%;
+}
+
+.navbar-inverse .navbar-nav>.active>a {
+    background-color: $pantone-206c;
+}
+
+.navbar-inverse .navbar-nav>li>a {
+    color: $white;
+}
